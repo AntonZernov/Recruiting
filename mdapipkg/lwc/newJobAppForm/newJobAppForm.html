@@ -1,0 +1,54 @@
+<template>
+    <div class="slds-modal__header slds-box">
+        <h2 class="slds-text-heading--medium">{label.NEW_JOBAPP_LABEL}</h2>
+    </div>
+    <lightning-card>
+        <form action=#>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <template if:true={positions.data}>
+                        <lightning-combobox
+                            data-field="testtest123__Position__c"
+                            label={label.POSITION_LABEL}
+                            placeholder={label.SELECT_POSITION}
+                            options={positionsOptions}
+                            onchange={handleChange}>
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={positions.error}>
+                        <div class="slds-truncate">{positions.error.body.message}</div> 
+                    </template>
+                </div>
+            </div>
+            <div class="slds-form-element slds-p-top_x-small">
+                <div class="slds-form-element__control">
+                    <template if:true={stageValues.data}>
+                        <lightning-combobox
+                            data-field="testtest123__Stage__c"
+                            label={label.STAGE_LABEL}
+                            placeholder={label.SELECT_STAGE}
+                            options={stageOptions}
+                            onchange={handleChange}>
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={stageValues.error}>
+                        <div class="slds-truncate">{stageValues.error.body.message}</div> 
+                    </template>
+                </div>
+            </div>
+            <div class="slds-form-element slds-p-top_x-small">
+                <label class="slds-form-element__label" >{label.DESCRIPTION_LABEL}</label>
+                <div class="slds-form-element__control">
+                    <textarea data-field="testtest123__Description__c" class="slds-textarea" onchange={handleChange}>
+                    </textarea>
+                </div>
+            </div>
+            <div class="slds-form-element slds-p-top_x-small">
+                <label class="slds-form-element__label" >{label.RESUME_URL}</label>
+                <div class="slds-form-element__control">
+                    <input type="url" data-field="testtest123__Resume__c" class="slds-input" onchange={handleChange} />
+                </div>
+            </div>
+        </form >
+    </lightning-card>
+</template>

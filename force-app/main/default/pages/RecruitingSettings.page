@@ -1,0 +1,108 @@
+<apex:page controller="RecruitingSettingsController" tabStyle="Recruiting_Settings__mdt" sidebar="false">
+    <apex:stylesheet value="{!$Resource.RecruitingSettingsStyle}" />
+    <apex:slds />
+    <apex:form id="settings">
+        <apex:pageBlock title="{!$Label.testtest123__settings}" >
+            <apex:outputText value="{!$Label.testtest123__show_inaccessible_fields}"/> 
+            <span class="slds-p-left_x-small">
+                <apex:inputCheckbox value="{!showInaccessibleFields}">
+                    <apex:actionSupport event="onchange" reRender="settings"/>
+                </apex:inputCheckbox>
+            </span>
+            <span class="slds-m-left_x-small">
+                <apex:outputText value="{!$Label.testtest123__show_user_photo}"/> 
+                <span class="slds-m-left_x-small">
+                    <apex:inputCheckbox value="{!recruitingMetadata.Show_user_photo__c}">
+                        <apex:actionSupport event="onchange" reRender="settings"/>
+                    </apex:inputCheckbox>
+                </span>
+            </span>
+            <div class="slds-grid slds-wrap slds-gutters_direct">
+                <div class="slds-col slds-size_1-of-4">
+                    <apex:outputLabel value="{!$Label.testtest123__select_candidate_fieldset}" /> <br/>
+                    <apex:selectList value="{!recruitingMetadata.Candidate_fieldset__c}" size="1">
+                        <apex:selectOptions value="{!candidateFieldSetOptions}"/>
+                        <apex:actionSupport event="onchange" reRender="candidate_all, candidate" />
+                    </apex:selectList> 
+                    <div class="slds-scope slds-p-left_x-large" id="can">
+                        <apex:dataList value="{!candidateFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!showInaccessibleFields}" id="candidate_all">
+                            <apex:outputText value="{!field.fieldLabel}" rendered="{!field.fieldAccessible}"/> 
+                            <apex:outputText rendered="{!!field.fieldAccessible}">
+                                <span class="inaccessible">{!field.fieldLabel}</span>
+                            </apex:outputText>
+                        </apex:dataList>
+                        <apex:dataList value="{!candidateFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!!showInaccessibleFields}" id="candidate">
+                            <apex:outputText value="{!field.fieldLabel}"/> 
+                        </apex:dataList>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <apex:outputLabel value="{!$Label.testtest123__select_fieldset_for_positions_plate}" /> <br/>
+                    <apex:selectList value="{!recruitingMetadata.Position_fieldset__c}" size="1">
+                        <apex:selectOptions value="{!positionsCardsFieldSetOptions}"/>
+                        <apex:actionSupport event="onchange" reRender="plate_all, plate" />
+                    </apex:selectList> 
+                    <div class="slds-scope slds-p-left_x-large">
+                        <apex:dataList value="{!positionsCardsFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!showInaccessibleFields}" id="plate_all">
+                            <apex:outputText value="{!field.fieldLabel}" rendered="{!field.fieldAccessible}"/> 
+                            <apex:outputText rendered="{!!field.fieldAccessible}">
+                                <span class="inaccessible">{!field.fieldLabel}</span>
+                            </apex:outputText>
+                        </apex:dataList>
+                        <apex:dataList value="{!positionsCardsFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!!showInaccessibleFields}" id="plate">
+                            <apex:outputText value="{!field.fieldLabel}"/> 
+                        </apex:dataList>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <apex:outputLabel value="{!$Label.testtest123__select_fieldset_for_positions_filters}" /> <br/>
+                    <apex:selectList value="{!recruitingMetadata.Position_filter_fieldset__c}" size="1">
+                        <apex:selectOptions value="{!positionFilterFieldSetOptions}"/>
+                        <apex:actionSupport event="onchange" reRender="filters_all, filters" />
+                    </apex:selectList> 
+                    <div class="slds-scope slds-p-left_x-large">
+                        <apex:dataList value="{!positionFilterFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!showInaccessibleFields}" id="filters_all">
+                            <apex:outputText value="{!field.fieldLabel}" rendered="{!field.fieldAccessible}"/> 
+                            <apex:outputText rendered="{!!field.fieldAccessible}">
+                                <span class="inaccessible">{!field.fieldLabel}</span>
+                            </apex:outputText>
+                        </apex:dataList>
+                        <apex:dataList value="{!positionFilterFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!!showInaccessibleFields}" id="filters">
+                            <apex:outputText value="{!field.fieldLabel}"/> 
+                        </apex:dataList>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <apex:outputLabel value="{!$Label.testtest123__select_fieldset_for_position_detail}" /> <br/>
+                    <apex:selectList value="{!recruitingMetadata.Position_detail_fields__c}" size="1">
+                        <apex:selectOptions value="{!positionDetailFieldSetOptions}"/>
+                        <apex:actionSupport event="onchange" reRender="detail_all, detail" />
+                    </apex:selectList> 
+                    <div class="slds-scope slds-p-left_x-large">
+                        <apex:dataList value="{!positionDetailFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!showInaccessibleFields}" id="detail_all">
+                            <apex:outputText value="{!field.fieldLabel}" rendered="{!field.fieldAccessible}"/> 
+                            <apex:outputText rendered="{!!field.fieldAccessible}">
+                                <span class="inaccessible">{!field.fieldLabel}</span>
+                            </apex:outputText>
+                        </apex:dataList>
+                        <apex:dataList value="{!positionDetailFieldsList}" var="field" style="list-style: circle" 
+                                rendered="{!!showInaccessibleFields}" id="detail">
+                            <apex:outputText value="{!field.fieldLabel}"/> 
+                        </apex:dataList>
+                    </div>
+                </div>
+            </div>
+            <apex:pageBlockButtons location="both">
+                <apex:commandButton action="{!save}" value="{!$Label.testtest123__save}"/>
+            </apex:pageBlockButtons>
+            <apex:pageMessages />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

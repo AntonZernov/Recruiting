@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>All</fullName>
+        <categories>Filter</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>All_fields</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>All fields</shortDescription>
+        <value>All fields</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Cancel_changes</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel changes</shortDescription>
+        <value>Cancel changes</value>
+    </labels>
+    <labels>
+        <fullName>Candidate</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidate</shortDescription>
+        <value>Candidate</value>
+    </labels>
+    <labels>
+        <fullName>Candidate_created</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidate created</shortDescription>
+        <value>New candidate successfully added.</value>
+    </labels>
+    <labels>
+        <fullName>Candidate_email</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidate email</shortDescription>
+        <value>Candidate Email</value>
+    </labels>
+    <labels>
+        <fullName>Candidate_fields</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Candidate fields</shortDescription>
+        <value>New candidatre fields.</value>
+    </labels>
+    <labels>
+        <fullName>Changed</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Changed</shortDescription>
+        <value>*Changed</value>
+    </labels>
+    <labels>
+        <fullName>Clear_filters</fullName>
+        <categories>Filter</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Clear filters</shortDescription>
+        <value>Clear all filters</value>
+    </labels>
+    <labels>
+        <fullName>Create_new_JobApp</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create new JobApp</shortDescription>
+        <value>New JobApp</value>
+    </labels>
+    <labels>
+        <fullName>Created_By</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Created By</shortDescription>
+        <value>Created By</value>
+    </labels>
+    <labels>
+        <fullName>Created_date_ASC</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Created date ASC</shortDescription>
+        <value>Old - new</value>
+    </labels>
+    <labels>
+        <fullName>Created_date_DESC</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Created date DESC</shortDescription>
+        <value>New - old</value>
+    </labels>
+    <labels>
+        <fullName>Current_page_error</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Current page error</shortDescription>
+        <value>Current page number is less than 1.</value>
+    </labels>
+    <labels>
+        <fullName>Date_closed</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date closed</shortDescription>
+        <value>Date closed</value>
+    </labels>
+    <labels>
+        <fullName>Date_opened</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date opened</shortDescription>
+        <value>Date opened</value>
+    </labels>
+    <labels>
+        <fullName>Description</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>Error_create_candidate</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error create candidate</shortDescription>
+        <value>Candidate was not created.</value>
+    </labels>
+    <labels>
+        <fullName>Error_create_record</fullName>
+        <categories>Common errors</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error create record</shortDescription>
+        <value>Record was not created.</value>
+    </labels>
+    <labels>
+        <fullName>Error_status_value</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error status value</shortDescription>
+        <value>Incorrect status value.</value>
+    </labels>
+    <labels>
+        <fullName>Error_update_positions</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error update</shortDescription>
+        <value>Error updating positions.</value>
+    </labels>
+    <labels>
+        <fullName>Filter_by_status</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter by status</shortDescription>
+        <value>Filter by status</value>
+    </labels>
+    <labels>
+        <fullName>JobApp_created</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>JobApp created</shortDescription>
+        <value>New JobApp successfully created.</value>
+    </labels>
+    <labels>
+        <fullName>JobApp_name</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>JobApp name</shortDescription>
+        <value>JobApp name</value>
+    </labels>
+    <labels>
+        <fullName>JobApp_not_created</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>JobApp not created</shortDescription>
+        <value>JobApp was not created</value>
+    </labels>
+    <labels>
+        <fullName>JobApp_stage</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>JobApp stage</shortDescription>
+        <value>JobApp Stage</value>
+    </labels>
+    <labels>
+        <fullName>Job_apps_list</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Job apps list</shortDescription>
+        <value>JobApps list</value>
+    </labels>
+    <labels>
+        <fullName>Last_Modified_By</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Last Modified By</shortDescription>
+        <value>Last Modified By</value>
+    </labels>
+    <labels>
+        <fullName>Max_salary</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Max salary</shortDescription>
+        <value>Max salary</value>
+    </labels>
+    <labels>
+        <fullName>Min_salary</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Min salary</shortDescription>
+        <value>Min salary</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>Negative_records_number</fullName>
+        <categories>Common errors</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Negative records number</shortDescription>
+        <value>Number of records per page is less than zero.</value>
+    </labels>
+    <labels>
+        <fullName>New_candidate</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New candidate</shortDescription>
+        <value>New candidate</value>
+    </labels>
+    <labels>
+        <fullName>New_jobApp</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>New jobApp</shortDescription>
+        <value>New JobApp</value>
+    </labels>
+    <labels>
+        <fullName>Next</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>No_access</fullName>
+        <categories>Security</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No access</shortDescription>
+        <value>Error access. Report to system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>No_update_rights</fullName>
+        <categories>Security</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No update rights</shortDescription>
+        <value>You haven&apos;t rights to update records.</value>
+    </labels>
+    <labels>
+        <fullName>Position</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Position</shortDescription>
+        <value>Position</value>
+    </labels>
+    <labels>
+        <fullName>Position_name</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Position name</shortDescription>
+        <value>Position name</value>
+    </labels>
+    <labels>
+        <fullName>Position_status</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Position status</shortDescription>
+        <value>Position status</value>
+    </labels>
+    <labels>
+        <fullName>Positions</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Positions</shortDescription>
+        <value>Positions</value>
+    </labels>
+    <labels>
+        <fullName>Previous</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Previous</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>Resume</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resume</shortDescription>
+        <value>Resume</value>
+    </labels>
+    <labels>
+        <fullName>Resume_URL</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resume URL</shortDescription>
+        <value>Resume URL</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Save_changed</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save changed</shortDescription>
+        <value>Save changed</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Search_in</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>Select_candidate</fullName>
+        <categories>Candidate</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select candidate</shortDescription>
+        <value>Select candidate</value>
+    </labels>
+    <labels>
+        <fullName>Select_candidate_fieldset</fullName>
+        <categories>Settings</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select candidate fieldset</shortDescription>
+        <value>Select candidate fieldset</value>
+    </labels>
+    <labels>
+        <fullName>Select_fieldset_for_position_detail</fullName>
+        <categories>Settings</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select fieldset for position detail</shortDescription>
+        <value>Select fieldset for position detail</value>
+    </labels>
+    <labels>
+        <fullName>Select_fieldset_for_positions_filters</fullName>
+        <categories>Settings</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select fieldset for positions filters</shortDescription>
+        <value>Select fieldset for positions filters</value>
+    </labels>
+    <labels>
+        <fullName>Select_fieldset_for_positions_plate</fullName>
+        <categories>Settings</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select fieldset for positions plate</shortDescription>
+        <value>Select fieldset for positions plate</value>
+    </labels>
+    <labels>
+        <fullName>Select_position</fullName>
+        <categories>Positions</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select position</shortDescription>
+        <value>Select position</value>
+    </labels>
+    <labels>
+        <fullName>Select_stage</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select stage</shortDescription>
+        <value>Select stage</value>
+    </labels>
+    <labels>
+        <fullName>Settings</fullName>
+        <categories>Settings</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Settings</shortDescription>
+        <value>Settings</value>
+    </labels>
+    <labels>
+        <fullName>Show_inaccessible_fields</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show inaccessible fields</shortDescription>
+        <value>Show inaccessible fields</value>
+    </labels>
+    <labels>
+        <fullName>Show_user_photo</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Show user photo</shortDescription>
+        <value>Show user photo</value>
+    </labels>
+    <labels>
+        <fullName>Some_error</fullName>
+        <categories>Common errors</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Some error</shortDescription>
+        <value>Something goes wrong. Report to system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>Sort_by_Name_ASC</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by Name ASC</shortDescription>
+        <value>A - z</value>
+    </labels>
+    <labels>
+        <fullName>Sort_by_Name_DESC</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort by Name DESC</shortDescription>
+        <value>Z - a</value>
+    </labels>
+    <labels>
+        <fullName>Sort_order</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sort order</shortDescription>
+        <value>Order by</value>
+    </labels>
+    <labels>
+        <fullName>Stage</fullName>
+        <categories>Job app</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Stage</shortDescription>
+        <value>Stage</value>
+    </labels>
+    <labels>
+        <fullName>Status</fullName>
+        <categories>Label</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>Success</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success.</value>
+    </labels>
+    <labels>
+        <fullName>Successfully_created</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Successfully created</shortDescription>
+        <value>Successfully created.</value>
+    </labels>
+    <labels>
+        <fullName>Successfully_updated</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Successfully updated</shortDescription>
+        <value>Successfully updated.</value>
+    </labels>
+    <labels>
+        <fullName>Too_much_records</fullName>
+        <categories>Common errors</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Too much records</shortDescription>
+        <value>Number of records per page is greater than 50000.</value>
+    </labels>
+    <labels>
+        <fullName>Warning</fullName>
+        <categories>Toast</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Warning</shortDescription>
+        <value>Warning.</value>
+    </labels>
+</CustomLabels>

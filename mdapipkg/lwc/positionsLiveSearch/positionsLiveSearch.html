@@ -1,0 +1,10 @@
+<template>
+    <lightning-input type="text" label={label.SEARCH} onchange={handleSearchChange}></lightning-input>
+    <lightning-radio-group name="radioGroup"
+                            label={label.SEARCH_IN}
+                            options={options}
+                            value={radioGroupValue}
+                            onchange={handleRadioChange}
+                            type="radio">
+    </lightning-radio-group>
+</template>

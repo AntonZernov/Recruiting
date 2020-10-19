@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/positionsTable": [
+                "positionsTable/positionsTable.js"
+            ],
+            "c/paginator": [
+                "paginator/paginator.js"
+            ],
+            "c/newCandidateForm": [
+                "newCandidateForm/newCandidateForm.js"
+            ],
+            "c/newJobAppForm": [
+                "newJobAppForm/newJobAppForm.js"
+            ],
+            "c/positionsCards": [
+                "positionsCards/positionsCards.js"
+            ],
+            "c/positionsLiveSearch": [
+                "positionsLiveSearch/positionsLiveSearch.js"
+            ],
+            "c/filters": [
+                "filters/filters.js"
+            ],
+            "c/positionDetail": [
+                "positionDetail/positionDetail.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}

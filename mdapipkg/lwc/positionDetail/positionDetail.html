@@ -1,0 +1,85 @@
+<template>
+    <template if:true={positionDetailId}>
+        <lightning-record-view-form
+            record-id={positionDetailId}
+            object-api-name="testtest123__Position__c">
+            <div class="slds-box">
+                <template if:true={position.name}>
+                    <div class="position-name slds-m-left_xx-small" 
+                        onclick={handleRedirectToPositionRecordPage}>{position.name}
+                    </div>
+                </template>
+                <template if:true={position} for:each={position.fields} for:item="field">
+                    <lightning-output-field key={field} field-name={field}>
+                    </lightning-output-field>
+                </template>
+                <template if:true={showJobApps}>
+                    <div class="slds-m-left_xx-small">
+                        <p>{label.JOB_APPS_LIST_LABEL}</p>
+                        <template if:true={jobApps} for:each={jobApps} for:item="jobApp">
+                            <div key={jobApp.Id} class="jobapp-name" data-id={jobApp.Id}
+                                onclick={handleRedirectToJobAppRecordPage}>{jobApp.Name}
+                            </div>
+                        </template>
+                    </div>
+                </template>
+                <template if:true={position.createdByName}>
+                    <div class="slds-m-left_xx-small">
+                        <p>{label.CREATED_BY_LABEL}</p>
+                        <template if:true={position.createdByPhotoURL}>
+                            <span class="slds-avatar slds-avatar_circle slds-m-right_xx-small">
+                                <img src={position.createdByPhotoURL}/>
+                            </span>
+                        </template>
+                        <lightning-badge label={position.createdByName}></lightning-badge>
+                    </div>
+                </template>
+                <template if:true={position.lastModifiedByName}>
+                    <div class="slds-m-left_xx-small">
+                        <p>{label.LAST_MODIFIED_BY_LABEL}</p>
+                        <template if:true={position.lastModifiedByPhotoURL}>
+                            <span class="slds-avatar slds-avatar_circle slds-m-right_xx-small">
+                                <img src={position.lastModifiedByPhotoURL}/>
+                            </span>
+                        </template>
+                        <lightning-badge label={position.lastModifiedByName}></lightning-badge>
+                    </div>
+                </template>
+                <div class="slds-p-around_xx-small">
+                    <lightning-button variant="brand-outline" 
+                                    label={label.CREATE_NEW_JOBAPP_LABEL}
+                                    onclick={handleShowJobAppCreationForm}
+                                    disabled={buttonDisabled}>
+                    </lightning-button>        
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </template>
+    <template if:true={showJobAppCreationForm}>
+        <section role="dialog" tabindex="-1" aria-label="Meaningful description of the modal content" 
+                aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header slds-modal__header_empty"></header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="dialog">
+                        <c-create-job-app onsuccess={handleSuccess}></c-create-job-app>
+                        <lightning-button-group class="buttons">
+                            <lightning-button
+                                class="slds-m-top_small"
+                                label={label.SAVE_LABEL}
+                                variant="success"
+                                onclick={handleSave}>
+                            </lightning-button>
+                            <lightning-button
+                                class="slds-m-top_small"
+                                label={label.CANCEL_LABEL}
+                                onclick={handleCancel}>
+                            </lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

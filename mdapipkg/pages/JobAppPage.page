@@ -1,0 +1,17 @@
+<apex:page standardController="JobApp__c" recordSetVar="jobapps" tabStyle="JobApp__c" sidebar="false">
+    <apex:pageBlock title="{!$Label.Job_apps_list}">
+        <apex:pageBlockTable value="{!jobapps}" var="jobapp">
+            <apex:column headerValue="{!$Label.JobApp_name}">
+                <apex:outputLink value="../{!jobapp.id}">{!jobapp.Name}</apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="{!$Label.JobApp_stage}" value="{!jobapp.Stage__c}" />
+            <apex:column headerValue="{!$Label.Candidate}" value="{!jobapp.Candidate__c}"/>
+            <apex:column headerValue="{!$Label.Candidate_email}" value="{!jobapp.Candidate__r.Email__c}" />
+            <apex:column headerValue="{!$Label.Position_name}" value="{!jobapp.Position__c}"/>
+            <apex:column headerValue="{!$Label.Position_status}" value="{!jobapp.Position__r.Status__c}" />
+            
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+    
+</apex:page>

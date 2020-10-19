@@ -1,0 +1,23 @@
+<apex:page controller="PositionsPageController" tabStyle="Position__c" sidebar="false">
+    <apex:form >       
+        <apex:pageBlock title="{!$Label.Positions}" id="positions_list">
+            <apex:outputLabel value="{!$Label.Filter_by_status}" /> <br/>
+            <apex:selectList title="{!$Label.Filter_by_status}" value="{!filter}" size="1">
+                <apex:selectOptions value="{!filterList}"/>
+                <apex:actionSupport event="onchange" action="{!changePositionsList}" reRender="positions_list" />
+            </apex:selectList>
+            <apex:pageBlockTable value="{!positionsList}" var="position" >
+                <apex:column headerValue="{!$Label.Position_name}" value="{!position.Name}" />
+                <apex:column headerValue="{!$Label.Status}">
+                    <apex:inputField value="{!position.Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="{!$Label.Date_opened}" value="{!position.Date_Opened__c}"/>
+                <apex:column headerValue="{!$Label.Date_closed}" value="{!position.Date_Closed__c}"/>
+                <apex:column headerValue="{!$Label.Min_salary}" value="{!position.Min_Salary__c}"/>
+                <apex:column headerValue="{!$Label.Max_salary}" value="{!position.Max_Salary__c}"/>
+            </apex:pageBlockTable>
+            <apex:commandButton action="{!save}" value="{!$Label.Save}" reRender="positions_list"/>
+            <apex:pageMessages />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

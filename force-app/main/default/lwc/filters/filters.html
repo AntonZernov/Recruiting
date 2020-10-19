@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-box">
+        <template if:true={fieldsOptions} for:each={fieldsOptions} for:item="field">
+            <div key={field.name}>
+                <lightning-checkbox-group name={field.name}
+                    label={field.name}
+                    class={field.name}
+                    options={field.options}
+                    value={value}
+                    onchange={handleChange}>
+                </lightning-checkbox-group>
+            </div>
+        </template>
+        <lightning-button variant="base" 
+            label={label.CLEAR_FILTERS} 
+            onclick={handleClearAllFilters}></lightning-button>
+    </div>
+</template>

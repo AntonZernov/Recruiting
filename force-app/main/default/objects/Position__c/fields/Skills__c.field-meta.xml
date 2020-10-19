@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skills__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Skills</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>english</fullName>
+                <default>false</default>
+                <label>english</label>
+            </value>
+            <value>
+                <fullName>SQL</fullName>
+                <default>false</default>
+                <label>SQL</label>
+            </value>
+            <value>
+                <fullName>Java</fullName>
+                <default>false</default>
+                <label>Java</label>
+            </value>
+            <value>
+                <fullName>JavaScript</fullName>
+                <default>false</default>
+                <label>JavaScript</label>
+            </value>
+            <value>
+                <fullName>sales experience</fullName>
+                <default>false</default>
+                <label>sales experience</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

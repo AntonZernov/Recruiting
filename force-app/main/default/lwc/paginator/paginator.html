@@ -1,0 +1,28 @@
+<template>
+    <lightning-button variant="base" 
+                    label={label.PREVIOUS_LABEL} 
+                    name={buttonsName.PREVIOUS_NAME} 
+                    title={label.PREVIOUS_LABEL}
+                    disabled={previousDisabled} 
+                    onclick={handleChoosePage} 
+                    class="slds-m-left_x-small">
+    </lightning-button>
+    <template for:each={buttons} for:item="button">
+        <lightning-button variant="base"
+                        key={button.label} 
+                        label={button.label}
+                        name={button.label}
+                        onclick={handleChoosePage}
+                        disabled={button.disabled}  
+                        class="slds-m-left_x-small">
+        </lightning-button>
+    </template>
+    <lightning-button variant="base" 
+                label={label.NEXT_LABEL} 
+                name={buttonsName.NEXT_NAME} 
+                title={label.NEXT_LABEL}
+                disabled={nextDisabled} 
+                onclick={handleChoosePage} 
+                class="slds-m-left_x-small">
+    </lightning-button>
+</template>

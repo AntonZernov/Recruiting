@@ -1,0 +1,1 @@
+FIND {*develop*} IN ALL FIELDS RETURNING Position__c(id, Name), Candidate__c(id, Name), Review__c(id, Name)

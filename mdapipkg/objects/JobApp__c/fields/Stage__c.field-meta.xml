@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1st New stage</fullName>
+                <default>false</default>
+                <label>1st New stage</label>
+            </value>
+            <value>
+                <fullName>2nd Resume accepted</fullName>
+                <default>false</default>
+                <label>2nd Resume accepted</label>
+            </value>
+            <value>
+                <fullName>2nd Resume rejected</fullName>
+                <default>false</default>
+                <label>2nd Resume rejected</label>
+            </value>
+            <value>
+                <fullName>3rd Personal interview successfully passed</fullName>
+                <default>false</default>
+                <label>3rd Personal interview successfully passed</label>
+            </value>
+            <value>
+                <fullName>3rd Personal interview failed</fullName>
+                <default>false</default>
+                <label>3rd Personal interview failed</label>
+            </value>
+            <value>
+                <fullName>4th Technical interview successfully passed</fullName>
+                <default>false</default>
+                <label>4th Technical interview successfully passed</label>
+            </value>
+            <value>
+                <fullName>4th Technical interview failed</fullName>
+                <default>false</default>
+                <label>4th Technical interview failed</label>
+            </value>
+            <value>
+                <fullName>5th English interview successfully passed</fullName>
+                <default>false</default>
+                <label>5th English interview successfully passed</label>
+            </value>
+            <value>
+                <fullName>5th English interview failed</fullName>
+                <default>false</default>
+                <label>5th English interview failed</label>
+            </value>
+            <value>
+                <fullName>Hired</fullName>
+                <default>false</default>
+                <label>Hired</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,108 @@
+<template>
+    <lightning-card>
+        <template if:true={statusValues.data}>
+            <lightning-combobox
+                            class="comboboxFilter"
+                            label={label.FILTER_LABEL}
+                            name="filter"
+                            value={label.ALL_LABEL}
+                            options={filterOptions}
+                            onchange={handleFilter}>
+            </lightning-combobox>
+        </template>
+        <template if:true={statusValues.error}>
+            <div class="slds-truncate">{statusValues.error.body.message}</div> 
+        </template>
+    <table if:true={positions} class="slds-table slds-table_cell-buffer slds-table_bordered">    
+    <thead>
+      <tr class="slds-line-height_reset">
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.NAME_LABEL}>{label.NAME_LABEL}</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.STATUS_LABEL}>{label.STATUS_LABEL}</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.DATE_OPENED_LABEL}>{label.DATE_OPENED_LABEL}</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.DATE_CLOSED_LABEL}>{label.DATE_CLOSED_LABEL}</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.MAX_SALARY_LABEL}>{label.MAX_SALARY_LABEL}</div>
+        </th>
+        <th class="" scope="col">
+            <div class="slds-truncate" title={label.MIN_SALARY_LABEL}>{label.MIN_SALARY_LABEL}</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+        <template if:true={positions} for:each={positions}  for:item="position" for:index="index">
+            <tr class="slds-hint-parent" key={position.Id}>
+                <td data-label="Name"> 
+                    <div class="slds-truncate">{position.position.Name}</div> 
+                </td>
+                <td data-label="Status">
+                    <template if:true={statusValues.data}>
+                        <lightning-combobox
+                            class="comboboxStatus"
+                            data-positionid={position.position.Id}
+                            data-index={index}
+                            name="status"
+                            label={position.Label}
+                            value={position.Status}
+                            options={statusValues.data.values}
+                            onchange={handleStatusChange}>
+                        </lightning-combobox>
+                    </template>
+                    <template if:true={statusValues.error}>
+                        <div class="slds-truncate">{statusValues.error.body.message}</div> 
+                    </template>
+                </td>
+                <td data-label="Date Opened"> 
+                    <div class="slds-truncate">{position.position.testtest123__Date_Opened__c}</div> 
+                </td>
+                <td data-label="Date Closed"> 
+                    <div class="slds-truncate">{position.position.testtest123__Date_Closed__c}</div> 
+                </td>
+                <td data-label="Max Salary"> 
+                    <div class="slds-truncate">{position.position.testtest123__Max_Salary__c}</div> 
+                </td>
+                <td data-label="Min Salary"> 
+                    <div class="slds-truncate">{position.position.testtest123__Min_Salary__c}</div> 
+                </td>
+            </tr>
+        </template>
+        <template if:true={error}>
+            <div class="slds-truncate">{error.body.message}</div> 
+        </template>
+    </tbody>
+  </table>
+  <lightning-button-group class="buttons">
+        <lightning-button variant="success" 
+                        label={label.SAVE_LABEL} 
+                        title={label.SAVE_CHANGED_LABEL} 
+                        disabled={buttonsDisabled}
+                        onclick={handleSave}
+                        class="slds-m-left_x-small">
+        </lightning-button>
+        <lightning-button variant="destructive" 
+                        label={label.CANCEL_LABEL} 
+                        title={label.CANCEL_CHANGES_LABEL} 
+                        disabled={buttonsDisabled}
+                        onclick={handleCancel} 
+                        class="slds-m-left_x-small">
+        </lightning-button>
+    </lightning-button-group> <br/>
+    <template if:true={positionsCount.data}>
+        <c-paginator onchoosepage={handleChoosePage}
+                     items-count={positionsCount.data}
+                     items-per-page={positionsPerPage}
+                     current-page={currentPage}>
+        </c-paginator> 
+    </template>
+    <template if:true={positionsCount.error}>
+        <div class="slds-truncate">{positionsCount.error.body.message}</div> 
+    </template>
+</lightning-card>
+</template>

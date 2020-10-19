@@ -1,0 +1,12 @@
+.position-name:hover, .jobapp-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.position-name {
+    font-size: medium;
+    color: var(--lwc-colorTextLink);
+}
+.jobapp-name {
+    font-size: small;
+    color: var(--lwc-colorTextLink);
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Points_Range</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Interview_result__c &lt; 1,Interview_result__c &gt;10)</errorConditionFormula>
+    <errorDisplayField>Interview_result__c</errorDisplayField>
+    <errorMessage>Result cannot be less than 1 or greater than 10</errorMessage>
+</ValidationRule>

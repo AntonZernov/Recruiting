@@ -1,0 +1,2 @@
+New Review {!Review__c.Name} was created.
+{!Review__c.Link}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Recruiting Settings</label>
+    <protected>false</protected>
+    <values>
+        <field>Candidate_fieldset__c</field>
+        <value xsi:type="xsd:string">testtest123__New_candidate</value>
+    </values>
+    <values>
+        <field>Position_detail_fields__c</field>
+        <value xsi:type="xsd:string">testtest123__Position_detail_fields</value>
+    </values>
+    <values>
+        <field>Position_fieldset__c</field>
+        <value xsi:type="xsd:string">testtest123__Position_short_info</value>
+    </values>
+    <values>
+        <field>Position_filter_fieldset__c</field>
+        <value xsi:type="xsd:string">testtest123__Position_short_info</value>
+    </values>
+    <values>
+        <field>Show_user_photo__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

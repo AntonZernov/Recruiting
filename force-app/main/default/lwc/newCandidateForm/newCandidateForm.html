@@ -1,0 +1,41 @@
+<template>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-2 slds-p-around_xx-small">
+            <div class="slds-modal__header slds-box">
+                <h2 class="slds-text-heading--medium">{label.NEW_CANDIDATE_LABEL}</h2>
+            </div>
+            <lightning-card>
+                <lightning-record-edit-form object-api-name="testtest123__Candidate__c" onsuccess={handleSuccess} >
+                    <lightning-messages>
+                    </lightning-messages>
+                    <template if:true={listOfFields} for:each={listOfFields}  for:item="field">
+                        <lightning-input-field 
+                            field-name={field}
+                            key={field}>
+                        </lightning-input-field>
+                    </template>
+                    <template if:true={error}>
+                        <div class="slds-truncate">{error}</div> 
+                    </template>
+                    <lightning-button-group class="buttons">
+                        <lightning-button
+                            class="slds-m-top_small"
+                            label={label.SAVE_LABEL}
+                            variant="success"
+                            type="submit">
+                        </lightning-button>
+                        <lightning-button
+                            class="slds-m-top_small"
+                            label={label.CANCEL_LABEL}
+                            onclick={handleCancel}>
+                        </lightning-button>
+                    </lightning-button-group>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </div>
+        <div class="slds-col slds-size_1-of-2 slds-p-around_xx-small">
+            <c-new-job-app-form >
+            </c-new-job-app-form>
+        </div>
+    </div>
+</template>

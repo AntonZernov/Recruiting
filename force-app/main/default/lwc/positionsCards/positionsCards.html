@@ -1,0 +1,92 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-wrap slds-gutters_direct">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-size_1-of-1">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-3">
+                                <lightning-combobox
+                                        class="slds-m-around_x-small"
+                                        label={label.ORDER_BY}
+                                        name="sorter"
+                                        value={order}
+                                        options={sorterOptions}
+                                        onchange={handleSorter}>
+                                </lightning-combobox>
+                            </div> 
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_2-of-3">
+                                <div class="slds-m-around_x-small">
+                                    <c-positions-live-search onsearch={handleSearch}></c-positions-live-search>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-p-around_x-small">
+                        <lightning-pill-container
+                            items={pillsItems}
+                            onitemremove={handlePillRemove}>
+                        </lightning-pill-container>
+                    </div>
+                </div>
+            </div><br/>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-p-around_x-small">
+                        <c-filters onapply={handleFilter} onclear={handleClearAllFilters}></c-filters>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+                <div class="slds-grid slds-wrap">
+                    <template if:true={positions} for:each={positions}  for:item="position">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12" 
+                            key={position.positionId}>
+                            <article class="slds-box slds-box_xx-small slds-m-around_x-small rounded-box unchecked" 
+                                data-id={position.positionId} onclick={handleArticleClick}> 
+                                <div class="slds-card__header" >
+                                    <header>
+                                        <h2 class="slds-card__header-title">{position.name}</h2>
+                                    </header>
+                                    <div class="slds-card__body slds-card__body_inner">
+                                        <ul>
+                                            <template for:each={position.fields} for:item="field">
+                                                <li key={position.positionId}>{field}</li>
+                                            </template>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </template>
+                    <template if:true={error}>
+                        <div class="slds-truncate">{error.body.message}</div> 
+                    </template>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-p-around_x-small">
+                        <c-position-detail></c-position-detail>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <lightning-card>
+                    <template if:true={positionsCount.data}>
+                        <template if:true={showPaginator}>
+                            <c-paginator onchoosepage={handleChoosePage}
+                                         items-count={positionsCount.data}
+                                         items-per-page={positionsPerPage}
+                                         current-page={currentPage}>
+                            </c-paginator> 
+                        </template>
+                    </template>
+                    <template if:true={positionsCount.error}>
+                        <div class="slds-truncate">{positionsCount.error.body.message}</div> 
+                    </template>
+                </lightning-card>
+            </div>
+        </div>
+    </lightning-card>
+</template>

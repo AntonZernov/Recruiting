@@ -1,0 +1,1 @@
+SELECT Name, Position__r.Name, Candidate__r.Name, (SELECT Name FROM Reviews__r) FROM JobApp__c WHERE CreatedDate > LAST_WEEK

@@ -1,0 +1,2 @@
+New JobApp {!JobApp__c.Name} was created.
+{!JobApp__c.Link}

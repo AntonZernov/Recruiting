@@ -1,0 +1,3 @@
+.inaccessible {
+    background-color: lightgrey;
+}
